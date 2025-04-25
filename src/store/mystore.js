@@ -9,7 +9,6 @@ const rootReducer = combineReducers({
     "bus": BusReducer,
     "student": StudentReducer,
     "attendence": AttendenceReducer,
-    
 });
 
 const mystore = legacy_createStore(rootReducer, applyMiddleware(thunk));

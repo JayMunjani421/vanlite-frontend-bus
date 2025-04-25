@@ -51,7 +51,6 @@ const BusLogin = () => {
                                             <div className="col-12">
                                                 <label for="yourUsername" className="form-label">Username</label>
                                                 <div className="input-group has-validation">
-                                                    {/* <span className="input-group-text" id="inputGroupPrepend">@</span> */}
                                                     <input type="text" value={username}
                                                         onChange={(e) => setUsername(e.target.value)} name="username" className="form-control" id="yourUsername" required />
                                                     <div className="invalid-feedback">Please enter your username.</div>
@@ -74,9 +73,6 @@ const BusLogin = () => {
                                             <div className="col-12">
                                                 <button className="btn btn-primary w-100" type="submit">Login</button>
                                             </div>
-                                            {/* <div className="col-12">
-                                                <p className="small mb-0">Don't have account? <a href="pages-register.html">Create an account</a></p>
-                                            </div> */}
                                         </form>
 
                                     </div>

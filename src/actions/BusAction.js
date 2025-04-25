@@ -14,7 +14,6 @@ export const loginBus = (params, navigate) => {
                         alert(message);
                         sessionStorage.setItem("buslogin", true);
                         sessionStorage.setItem("token", json["access_token"]);
-                        // sessionStorage.setItem("busdata", JSON.stringify(json["data"]));
                         dispatch({ "type": "LOGIN", "payload": { "data": json["data"].bus || [] } });
                         console.log(sessionStorage.getItem("token"));
                         navigate("/attendence");

@@ -1,7 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "../constants/constant";
 
-
 export const getStudentDataByBus = (bus_id) => {
     return (dispatch) => {
         dispatch({ type: "START" });

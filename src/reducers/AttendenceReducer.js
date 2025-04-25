@@ -29,25 +29,16 @@ const AttendenceReducer = (state = initialState, action) => {
                 ...state,
                 "message": action.payload.message,
             };
-        // case "STORE_ATTENDENCE_SINGLE":
-        //     console.log("Received attendance data in reducer:", action.payload.data);
-        //     return {
-        //         ...state,
-        //         single: action.payload.data,
-        //         loading: false
-        //     };
         case "STORE_ATTENDENCE_SINGLE":
-            // console.log("Received attendance data in reducer:", action.payload.data);
             return {
                 ...state,
                 single: {
-                    ...state.single, // ✅ Preserve existing data
-                    [action.payload.student_id]: action.payload.data // ✅ Store by student ID
+                    ...state.single, // Preserve existing data
+                    [action.payload.student_id]: action.payload.data // Store by student ID
                 },
                 loading: false
             };
         case "STORE_ATTENDENCE_DATA_SINGLE":
-            // console.log("Attendance Data:", action.payload.data);
         return {
             ...state,
             Attendence_data: action.payload.data
